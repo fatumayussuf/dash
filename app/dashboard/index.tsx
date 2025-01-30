@@ -96,7 +96,7 @@ export default function EcommerceOverviewPage() {
                 <div className="w-full h-2 mt-2 bg-gray-700 rounded-full">
                   <div style={{ width: `${(product % 3) * 30 + 30}%` }} className="h-full bg-blue-500 rounded-full"></div>
                 </div>
-                <p className="text-sm text-gray-400 mt-2">Price: $ {(product % 2 === 0 ? 45 : 99).toLocaleString()}</p>
+                <p className="text-sm text-gray-400 mt-2">Price: Ksh {(product % 2 === 0 ? 45 : 99).toLocaleString()}</p>
               </div>
             ))}
           </div>

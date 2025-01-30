@@ -94,11 +94,11 @@ export default function ProductPage() {
 
   const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "Ksh",
   }).format(product.price);
 
   const features = [
-    { icon: Package2, text: "Free shipping on orders over $100", color: "text-purple-500" },
+    { icon: Package2, text: "Free shipping on orders over Ksh10,000", color: "text-purple-500" },
     { icon: Truck, text: "Same-day delivery available", color: "text-emerald-500" },
     { icon: Shield, text: "2-year warranty included", color: "text-blue-500" },
   ];

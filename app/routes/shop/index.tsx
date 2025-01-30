@@ -53,20 +53,20 @@ export const loader = async ({ request }: { request: Request }) => {
     }
   }
 
-  return {
-    products: JSON.parse(JSON.stringify(category
-      ? products.filter(product => product.category === category)
+  return { 
+    products: JSON.parse(JSON.stringify(category 
+      ? products.filter(product => product.category === category) 
       : products
-    )),
-    categories,
-    cartItems: cartItemsResults
+    )), 
+    categories, 
+    cartItems: cartItemsResults 
   };
 };
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "ShopSmart - Your One-Stop Shopping Destination" },
-    { name: "description", content: "Discover amazing deals on electronics, fashion, home goods and more." },
+    { title: "Smart E-Shop - Your One-Stop Shopping Destination" },
+    { name: "description", content: "Discover amazing deals on abayas, shoes, watches and more." },
   ];
 }
 
@@ -140,7 +140,7 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  to="/categories"
+                  to="/shop/products"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white rounded-full hover:bg-white/20 transition-colors font-medium backdrop-blur-sm"
                 >
                   Browse Categories
@@ -150,16 +150,15 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
                 {[
-                  { label: 'Happy Customers', value: '200K+' },
-                  { label: 'Exclusive Products', value: '15K+' },
-                  { label: '5-Star Reviews', value: '75K+' },
+                  { label: 'Active Users', value: '2M+' },
+                  { label: 'Products', value: '10K+' },
+                  { label: 'Reviews', value: '50K+' }
                 ].map((stat, index) => (
                   <div key={index}>
-                    <div className="text-3xl font-bold text-white">{stat.value}</div>
+                    <div className="text-2xl font-bold text-white">{stat.value}</div>
                     <div className="text-sm text-gray-400">{stat.label}</div>
                   </div>
                 ))}
-
               </div>
             </div>
 

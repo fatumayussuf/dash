@@ -1,4 +1,4 @@
-import { Edit, Trash2, PlusCircle, X, Package, Tags, ListPlus, DollarSign, Box, FileText, Activity, Image } from "lucide-react";
+import { Edit, Trash2, PlusCircle, X, Package, Tags, ListPlus, Wallet, Box, FileText, Activity, Image } from "lucide-react";
 import { useState } from "react";
 import { Form, redirect, useLoaderData } from "react-router";
 import { clientPromise, ObjectId } from "~/db.server";
@@ -129,7 +129,7 @@ function AddOrUpdateProduct({ product, closeModal }: { product?: any; closeModal
                         
                         <div>
                             <label className="text-sm font-medium text-gray-300 mb-2 flex items-center gap-2" htmlFor="price">
-                                <DollarSign className="h-4 w-4" />
+                            <Wallet className="h-4 w-4" />
                                 Price
                             </label>
                             <input

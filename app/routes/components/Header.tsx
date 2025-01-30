@@ -1,5 +1,5 @@
 import { 
-  Bell, ChevronDown, Gift, Headphones, Menu, Percent, Search, ShoppingBag, ShoppingCart, Truck, User, X 
+  Bell, ChevronDown, Gift, Headphones, Menu, Percent, Search, ShoppingBag, Truck, User, X 
 } from "lucide-react";
 import { Link } from "react-router";
 import CartComponent from "./CartComponent";
@@ -72,10 +72,10 @@ export default function Header({ cartItems }: HeaderProps) {
                     </div>
                   </div>
                 </div>
-                <Link to="/deals" className="text-gray-600 hover:text-gray-900">
+                <Link to="/shop/products" className="text-gray-600 hover:text-gray-900">
                   Deals
                 </Link>
-                <Link to="/new" className="text-gray-600 hover:text-gray-900">
+                <Link to="/shop/products" className="text-gray-600 hover:text-gray-900">
                   What's New
                 </Link>
               </nav>
@@ -104,17 +104,6 @@ export default function Header({ cartItems }: HeaderProps) {
                   onClick={() => setIsSearchOpen(true)}
                 >
                   <Search className="w-6 h-6 text-gray-600" />
-                </button>
-                <button
-                  className="p-2 hover:bg-gray-100 rounded-full relative"
-                  onClick={() => setIsCartOpen(!isCartOpen)}
-                >
-                  <ShoppingCart className="w-6 h-6 text-gray-600" />
-                  {cartCount > 0 && (
-                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-blue-600 text-white text-xs rounded-full flex items-center justify-center">
-                      {cartCount}
-                    </span>
-                  )}
                 </button>
                 <CartComponent cartItems={cartItems} />
                 <div className="hidden md:block relative group">

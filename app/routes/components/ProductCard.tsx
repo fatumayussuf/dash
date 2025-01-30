@@ -88,11 +88,11 @@ export default function ProductCard({ product }) {
         <div className="flex justify-between items-end">
           <div className="space-y-1">
             <div className="text-xl font-bold text-gray-900">
-              ${product.price}
+              Ksh{product.price}
             </div>
             {product.originalPrice && (
               <div className="text-sm text-gray-500 line-through">
-                ${product.originalPrice}
+                Ksh{product.originalPrice}
               </div>
             )}
           </div>
