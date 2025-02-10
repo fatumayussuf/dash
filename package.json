@@ -2,13 +2,12 @@
   "name": "my-react-router-app",
   "private": true,
   "type": "module",
- "scripts": {
-  "build": "remix build",
-  "dev": "remix dev",
-  "start": "remix-serve ./build",
-  "typecheck": "remix typegen && tsc"
-},
-
+  "scripts": {
+    "build": "remix build",
+    "dev": "react-router dev",
+    "start": "cross-env NODE_ENV=production react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
+  },
   "dependencies": {
     "@react-router/fs-routes": "^7.0.2",
     "@react-router/node": "^7.0.2",
